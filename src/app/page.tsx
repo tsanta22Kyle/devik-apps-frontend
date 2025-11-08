@@ -1,65 +1,65 @@
-import Image from "next/image";
+import Contact from "./components/Contact";
+import HeroSection from "./components/HeroSection";
+import ServiceCard from "./components/ServiceCard";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className=" bg-black text-white min-h-screen">
+      <HeroSection />
+      <section className="py-16 px-6 md:px-20">
+        <h2 className="text-3xl font-semibold text-center mb-10">
+          Nos Services
+        </h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <ServiceCard
+            title="Développement Web"
+            description="Sites vitrines, e-commerce et applications web modernes avec Next.js, React et Node.js."
+            icon="💻"
+          />
+          <ServiceCard
+            title="Applications Mobiles"
+            description="Apps performantes et intuitives sur Android, iOS et PWA."
+            icon="📱"
+          />
+          <ServiceCard
+            title="Logiciels Sur Mesure"
+            description="Des outils internes, ERP ou CRM conçus selon vos besoins métier."
+            icon="⚙️"
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+      <section id="templates" className="py-20 bg-[#0a0a0a] text-white">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+    <h2 className="text-4xl font-bold mb-4">Choisissez votre style ✨</h2>
+    <p className="text-gray-400 mb-12">
+      Inspirez-vous de modèles gratuits que nous personnalisons selon votre identité.
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        { name: "Portfolio créatif", img: "/assets/creative_portfolio.jpg", url: "https://templatedemo1.com" },
+        { name: "Site vitrine professionnel", img: "/assets/pro_website.jpg", url: "https://templatedemo2.com" },
+        { name: "Landing startup", img: "/assets/startup_website.jpg", url: "https://templatedemo3.com" },
+        { name: "Agence moderne", img: "/assets/agency.jpg", url: "https://templatedemo4.com" },
+        { name: "Blog personnel", img: "/assets/blog.jpg", url: "https://templatedemo5.com" },
+        { name: "E-commerce minimal", img: "/assets/shop.jpg", url: "https://templatedemo6.com" },
+      ].map((tpl, i) => (
+        <div key={i} className="relative group rounded-2xl overflow-hidden border border-white/10 hover:border-[#00FFAE]/40 transition-all">
+          <img src={tpl.img} alt={tpl.name} className="w-full h-60 object-cover opacity-90 group-hover:opacity-100 transition-opacity" />
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all flex flex-col items-center justify-center">
+            <h3 className="text-lg font-semibold mb-2">{tpl.name}</h3>
+            <a href={"#"} target="_blank" rel="noopener noreferrer"
+              className="bg-[#00FFAE] text-black px-4 py-2 rounded-lg font-medium hover:scale-105 transition-transform">
+              Voir le template
+            </a>
+          </div>
         </div>
-      </main>
+      ))}
     </div>
+  </div>
+</section>
+
+      <Contact></Contact>
+    </main>
   );
 }
