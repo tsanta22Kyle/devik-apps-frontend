@@ -11,6 +11,7 @@ const exo2 = Exo_2({
 export const metadata = {
   title: "Devik’Apps - Agence Digitale à Madagascar",
   description: "Développement de sites web, applications et logiciels sur mesure.",
+  icons: "/assets/1.png"
   
 };
 
