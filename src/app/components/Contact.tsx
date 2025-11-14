@@ -12,7 +12,7 @@ export default function Contact(){
     <div className="flex-1 space-y-6">
       <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-[#00FFAE]/40 transition-all">
         <h3 className="text-xl font-semibold mb-2">📧 Email</h3>
-        <p className="text-gray-300">contact@devikapps.com</p>
+        <p className="text-gray-300">kyle.rakotoarison@gmail.com</p>
       </div>
 
       <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-[#00FFAE]/40 transition-all">

@@ -93,15 +93,15 @@ export default function HeroSection() {
         Devik’Apps conçoit des sites web, applications et logiciels sur mesure
         pour propulser votre entreprise dans le monde numérique.
       </p>
-      <div className="flex items-center justify-center gap-10">
+      <div className="flex items-center justify-center gap-10 max-md:flex-col">
         <a
-          href="/contact"
+          href="/"
           className="bg-[#0af395] z-1 hover:bg-[rgb(62,255,178)] hover:shadow-sm  shadow-[rgb(62,255,178)] duration-200 text-black font-semibold px-6 py-4 rounded-xl transition-all"
         >
           Discutons de votre projet
         </a>
         <a
-          href="/contact"
+          href="/"
           className="bg-[#36363687] border border-[#ffffff44] text-white z-1 hover:bg-[rgb(53,53,53)] hover:shadow-sm   duration-200  font-semibold px-6 py-4 rounded-xl transition-all"
         >
           Découvrir nos services

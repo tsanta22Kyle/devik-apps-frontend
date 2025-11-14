@@ -8,7 +8,7 @@ import { IoMdMail } from "react-icons/io";
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-center fixed top-0 z-2  left-0 p-5 w-full backdrop-blur-xl bg-transparent">
-      <div className="flex items-center justify-around m-auto border rounded-2xl w-[40vw] p-1 border-[#ffffff2e] backdrop-blur-xl">
+      <div className="flex items-center justify-around m-auto border rounded-2xl md:w-[40vw] p-1 border-[#ffffff2e] backdrop-blur-xl">
        <span className="flex items-center justify-center gap-5">
 
       <Image

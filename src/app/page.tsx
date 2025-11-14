@@ -7,7 +7,7 @@ export default function Home() {
     <main className=" bg-black text-white min-h-screen">
       <HeroSection />
       <section className="py-16 px-6 md:px-64">
-        <div className="flex ">
+        <div className="flex max-md:flex-col gap-3">
           <div className=" flex flex-col items-start">
             <h1 className="text-start">Nos services</h1>
             <h2 className="text-4xl font-semibold text-start mb-10">
