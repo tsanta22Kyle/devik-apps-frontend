@@ -7,8 +7,8 @@ import { IoMdMail } from "react-icons/io";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-center fixed top-0 z-2  left-0 p-5 w-full backdrop-blur-xl bg-transparent">
-      <div className="flex items-center justify-around m-auto border rounded-2xl md:w-[40vw] p-1 border-[#ffffff2e] backdrop-blur-xl">
+    <nav className="flex items-center justify-center fixed top-0 z-2  left-0 p-5 max-md:p-1 w-full backdrop-blur-xl bg-transparent">
+      <div className="flex items-center justify-around m-auto border rounded-2xl md:w-[40vw] px-5 border-[#ffffff2e] backdrop-blur-xl">
        <span className="flex items-center justify-center gap-5">
 
       <Image
@@ -21,7 +21,7 @@ export default function Navbar() {
         ></Image>
       <h1 className="text-3xl font-bold"> <span className="text-[#0af395]">Devik'</span> <span className="">Apps</span> </h1>
         </span>
-      <ul className=" flex gap-5 items-center justify-center">
+      <ul className=" flex gap-5 items-center justify-center ">
         <li className="text-[#b1b1b1] hover:text-white transition-all">
             <Link href={""} >
             <BsTwitter size={25} ></BsTwitter>

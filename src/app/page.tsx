@@ -6,36 +6,33 @@ export default function Home() {
   return (
     <main className=" bg-black text-white min-h-screen">
       <HeroSection />
-      <section className="py-16 px-6 md:px-64">
-        <div className="flex max-md:flex-col gap-3">
-          <div className=" flex flex-col items-start">
+      <section className="py-16 px-6 md:px-64 relative">
+        <div className="flex flex-col gap-3 ">
             <h1 className="text-start">Nos services</h1>
+          <div className=" flex gap-25 max-md:flex-col">
             <h2 className="text-4xl font-semibold text-start mb-10">
               Les <span className="text-[#0af395]">Services</span> que nous
               Offrons
             </h2>
-          </div>
-          <p className="">
+          <p className="opacity-70">
             Nous offrons des services permettant aux entreprise d'accroître leur
             visibilité et de solidifier leur réputation en ligne ainsi que leur
             productivité .
           </p>
+          </div>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="flex w-full flex-col gap-3 ">
+           <div className="w-70 h-70 blur-[100px] top-0 left-30 bg-[#00e0ca3a] absolute"></div>
           <ServiceCard
             title="Développement Web"
-            description="Sites vitrines, e-commerce et applications web modernes avec Next.js, React et Node.js."
-            icon="💻"
           />
           <ServiceCard
             title="Applications Mobiles"
-            description="Apps performantes et intuitives sur Android, iOS et PWA."
-            icon="📱"
+            variant="mobile"
           />
           <ServiceCard
             title="Logiciels Sur Mesure"
-            description="Des outils internes, ERP ou CRM conçus selon vos besoins métier."
-            icon="⚙️"
+            variant="software"
           />
         </div>
       </section>
