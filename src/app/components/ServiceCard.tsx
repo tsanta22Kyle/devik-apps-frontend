@@ -59,7 +59,7 @@ function CustomSoftwareSteps() {
   ];
 
   return (
-       <section className="w-full py-20 bg-black text-white">
+       <section className="w-full py-20 ">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-6">
           Notre Process <span className="text-primary">en 4 étapes</span>
@@ -71,12 +71,12 @@ function CustomSoftwareSteps() {
         {/* Steps container */}
         <div className="relative">
           {/* Line */}
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-700 -z-10" />
+          {/* <div className="absolute top-1/2 left-0 w-full h-0.5  -z-10" /> */}
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* Step 1 */}
             <div className="flex flex-col items-center">
-              <div className="w-20 h-20 rounded-full bg-gray-900 border border-primary flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full  border border-primary flex items-center justify-center">
                 <FiTarget className="text-3xl text-primary" />
               </div>
               <h3 className="mt-4 text-xl font-semibold">Planning</h3>
@@ -87,7 +87,7 @@ function CustomSoftwareSteps() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center">
-              <div className="w-20 h-20 rounded-full bg-gray-900 border border-primary flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full  border border-primary flex items-center justify-center">
                 <FiLayers className="text-3xl text-primary" />
               </div>
               <h3 className="mt-4 text-xl font-semibold">Design</h3>
@@ -98,7 +98,7 @@ function CustomSoftwareSteps() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center">
-              <div className="w-20 h-20 rounded-full bg-gray-900 border border-primary flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full  border border-primary flex items-center justify-center">
                 <FiCode className="text-3xl text-primary" />
               </div>
               <h3 className="mt-4 text-xl font-semibold">Développement</h3>
@@ -109,7 +109,7 @@ function CustomSoftwareSteps() {
 
             {/* Step 4 */}
             <div className="flex flex-col items-center">
-              <div className="w-20 h-20 rounded-full bg-gray-900 border border-primary flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full  border border-primary flex items-center justify-center">
                 <FiCheckCircle className="text-3xl text-primary" />
               </div>
               <h3 className="mt-4 text-xl font-semibold">Livraison</h3>
@@ -140,7 +140,7 @@ export default function ServiceCard({
           onClick={() => {
             setIsDropped(!isDropped);
           }}
-          className=" border-b opacity-50 hover:opacity-100 max-md:opacity-100 gap-5 hover:translate-y-2 border-[#ffffff82] py-6  flex flex-col items-center transition"
+          className={` ${isDropped ? "opacity-100": "opacity-50"} border-b  hover:opacity-100 max-md:opacity-100 gap-12 hover:translate-y-2 border-[black] dark:border-[#ffffff82] py-6  flex flex-col items-center transition`}
         >
           <div className="flex items-center w-full justify-between">
             <h3 className="text-3xl  mb-2">{title}</h3>
@@ -156,13 +156,13 @@ export default function ServiceCard({
             className={`w-full flex max-lg:flex-col justify-around transition-all duration-500 ease-in-out  ${
               isDropped
                 ? "h-50 max-md:h-[650px]  max-lg:h-[1000px]  py-5"
-                : "h-0 opacity-0"
+                : "h-0 opacity-0 -z-10"
             } `}
           >
-            <div className="flex gap-3 border border-[#ffffff52] p-8 relative rounded-md flex-col lg:w-[30%] ">
+            <div className="flex gap-3 border border-[#00000012] shadow-sm not-dark:hover:shadow-2xl  dark:border-[#ffffff52] p-8 relative rounded-md flex-col lg:w-[30%] ">
               <div className=" absolute -top-8 left-1/2 -translate-x-1/2 text-4xl mb-4 bg-primary flex items-center justify-center  p-3 rounded-md">
                 {" "}
-                <CiGlobe />{" "}
+                <CiGlobe className="not-dark:text-white" />{" "}
               </div>
               <p className="text-2xl">site vitrine</p>
               <p className="w-">
@@ -170,20 +170,20 @@ export default function ServiceCard({
                 votre identité.
               </p>
             </div>
-            <div className="flex gap-3 border border-[#ffffff52] p-8 relative rounded-md flex-col  lg:w-[30%] ">
+            <div className="flex gap-3 border border-[#00000012] shadow-sm not-dark:hover:shadow-2xl  dark:border-[#ffffff52] p-8 relative rounded-md flex-col  lg:w-[30%] ">
               <div className=" absolute -top-8 left-1/2 -translate-x-1/2 text-4xl mb-4 bg-primary flex items-center justify-center  p-3 rounded-md">
                 {" "}
-                <FiShoppingCart />{" "}
+                <FiShoppingCart className="not-dark:text-white" />{" "}
               </div>
               <p className="text-2xl">e-commerce</p>
               <p className="w-">
                 Boostez votre activité en ligne grâce à l'e-commerce.
               </p>
             </div>
-            <div className="flex gap-3 border border-[#ffffff52] p-8 relative rounded-md flex-col lg:w-[30%] ">
+            <div className="flex gap-3 border border-[#00000012] shadow-sm not-dark:hover:shadow-2xl  dark:border-[#ffffff52] p-8 relative rounded-md flex-col lg:w-[30%] ">
               <div className=" absolute -top-8 left-1/2 -translate-x-1/2 text-4xl mb-4 bg-primary flex items-center justify-center  p-3 rounded-md">
                 {" "}
-                <MdOutlineDashboard />{" "}
+                <MdOutlineDashboard className="not-dark:text-white" />{" "}
               </div>
               <p className="text-2xl">Dashboard admin</p>
               <p className="w-">
@@ -200,7 +200,7 @@ export default function ServiceCard({
           onClick={() => {
             setIsDropped(!isDropped);
           }}
-          className=" border-b opacity-50 hover:opacity-100 max-md:opacity-100 gap-5 hover:translate-y-2 border-[#ffffff82] py-6  flex flex-col items-center transition"
+          className={` border-b ${isDropped ? "opacity-100": "opacity-50"} hover:opacity-100 max-md:opacity-100 gap-5 hover:translate-y-2 border-[black] dark:border-[#ffffff82] py-6  flex flex-col items-center transition`}
         >
           <div className="flex items-center w-full justify-between">
             <h3 className="text-3xl  mb-2">{title}</h3>
@@ -215,8 +215,8 @@ export default function ServiceCard({
           <div
             className={`w-full flex transition-all duration-500 ease-in-out  ${
               isDropped
-                ? "h-50 max-md:h-[650px]  max-lg:h-[1000px]  py-5"
-                : "h-0 opacity-0"
+                ? "h-50  py-5"
+                : "h-0 opacity-0 -z-10"
             } `}
           >
             {/* Icon / Image */}
@@ -228,7 +228,7 @@ export default function ServiceCard({
 
             {/* Text Content */}
             <div className="flex-1">
-              <h3 className="text-2xl font-semibold text-white tracking-wide">
+              <h3 className="text-2xl font-semibold  tracking-wide">
                 {/* {title} */}
                 Apps Rapides, Stables & Sécurisées
               </h3>
@@ -254,7 +254,7 @@ export default function ServiceCard({
           onClick={() => {
             setIsDropped(!isDropped);
           }}
-          className=" border-b opacity-50 hover:opacity-100 max-md:opacity-100 gap-5 hover:translate-y-2 border-[#ffffff82] py-6  flex flex-col items-center transition"
+          className={`${isDropped ? "opacity-100": "opacity-50"} border-b  hover:opacity-100 max-md:opacity-100 gap-5 hover:translate-y-2 border-[black] dark:border-[#ffffff82] py-6  flex flex-col items-center transition`}
         >
           <div className="flex items-center w-full justify-between">
             <h3 className="text-3xl  mb-2">{title}</h3>
@@ -269,8 +269,8 @@ export default function ServiceCard({
           <div
             className={`w-full flex max-lg:flex-col justify-around transition-all duration-500 ease-in-out  ${
               isDropped
-                ? "h-[460px] max-md:h-[650px]  max-lg:h-[1000px]  py-5"
-                : "h-0 opacity-0"
+                ? "h-[460px] max-md:h-[1200px]  max-lg:h-[1000px]  py-5"
+                : "h-0 opacity-0 -z-10"
             } `}
           >
             <CustomSoftwareSteps></CustomSoftwareSteps>

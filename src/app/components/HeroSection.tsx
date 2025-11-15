@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-68 relative bg-linear-to-t ">
+    <section className="flex flex-col items-center justify-center text-center py-68 relative bg-background ">
       {/* <img src="/logo.png" alt="Devik'Apps Logo" className="w-24 mb-6" /> */}
 
       {/* <div
@@ -86,10 +86,10 @@ export default function HeroSection() {
 
 
 
-      <h1 className="text-5xl font-bold mb-4 z-1 opacity-95">
+      <h1 className="text-5xl text-black dark:text-white font-bold mb-4 z-1 opacity-95">
         Donnez vie à vos <span className="text-[#0af395]">idées</span> digitales
       </h1>
-      <p className="text-[#ffffff] max-w-2xl mb-8 z-1 opacity-75">
+      <p className="text-black dark:text-white max-w-2xl mb-8 z-1 opacity-75">
         Devik’Apps conçoit des sites web, applications et logiciels sur mesure
         pour propulser votre entreprise dans le monde numérique.
       </p>
@@ -101,8 +101,8 @@ export default function HeroSection() {
           Discutons de votre projet
         </a>
         <a
-          href="/"
-          className="bg-[#36363687] border border-[#ffffff44] text-white z-1 hover:bg-[rgb(53,53,53)] hover:shadow-sm   duration-200  font-semibold px-6 py-4 rounded-xl transition-all"
+          href="#services"
+          className="dark:bg-[#36363687] border-primary not-dark:text-primary border-2 dark:border-[#ffffff44]  z-1 dark:hover:bg-[rgb(53,53,53)]   duration-200  font-semibold px-6 py-4 rounded-xl transition-all"
         >
           Découvrir nos services
         </a>

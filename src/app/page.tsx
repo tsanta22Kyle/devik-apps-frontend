@@ -4,9 +4,9 @@ import ServiceCard from "./components/ServiceCard";
 
 export default function Home() {
   return (
-    <main className=" bg-black text-white min-h-screen">
+    <main className="  min-h-screen">
       <HeroSection />
-      <section className="py-16 px-6 md:px-64 relative">
+      <section id="services" className="py-16 px-6 md:px-64 relative">
         <div className="flex flex-col gap-3 ">
             <h1 className="text-start">Nos services</h1>
           <div className=" flex gap-25 max-md:flex-col">
@@ -21,7 +21,7 @@ export default function Home() {
           </p>
           </div>
         </div>
-        <div className="flex w-full flex-col gap-3 ">
+        <div  className="flex w-full flex-col gap-3 ">
            <div className="w-70 h-70 blur-[100px] top-0 left-30 bg-[#00e0ca3a] absolute"></div>
           <ServiceCard
             title="Développement Web"
@@ -36,10 +36,10 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="templates" className="py-20 bg-[#0a0a0a] text-white">
+      <section id="templates" className="py-20  ">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-4">Choisissez votre style ✨</h2>
-          <p className="text-gray-400 mb-12">
+          <p className="dark:text-gray-400 mb-12">
             Inspirez-vous de modèles gratuits que nous personnalisons selon
             votre identité.
           </p>

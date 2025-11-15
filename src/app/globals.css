@@ -5,6 +5,9 @@
   --foreground: #171717;
   --primary:  #0af395;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -18,11 +21,28 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+  }
+   body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    transition: all;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    /* font-family: Arial, Helvetica, sans-serif; */
+    scroll-behavior: smooth;
+    transition: all;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}

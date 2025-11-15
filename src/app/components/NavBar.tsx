@@ -1,38 +1,59 @@
+'use client'
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { BsFacebook, BsMailbox, BsTwitter } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
 import { CiMail } from "react-icons/ci";
 import { IoMdMail } from "react-icons/io";
+import ToggleButton from "./ToggleThemeButton";
 
 export default function Navbar() {
+  const {systemTheme : theme   } = useTheme();
+  const [isRendered , setIsRendered] = useState(false);
+  
+  useEffect(()=>{
+    setIsRendered(true)
+    console.log("theme",theme);
+  },[])
+
+  if(!isRendered){
+    return(
+      <div></div>
+    )
+  }
+  
+ switch(theme) {
+  case "dark":
   return (
     <nav className="flex items-center justify-center fixed top-0 z-2  left-0 p-5 max-md:p-1 w-full backdrop-blur-xl bg-transparent">
-      <div className="flex items-center justify-around m-auto border rounded-2xl md:w-[40vw] px-5 border-[#ffffff2e] backdrop-blur-xl">
-       <span className="flex items-center justify-center gap-5">
+      <div className="flex items-center justify-around m-auto dark:border rounded-2xl md:w-[40vw] px-5 not-dark:shadow-2xl dark:border-[#ffffff2e] backdrop-blur-xl">
+       <span className="flex items-center justify-center  relative gap-5">
 
       <Image
-        src={"/assets/2.png"}
+        src={`assets/2.png`}
         alt="Devik'Apps Logo"
         width={0}
         height={0}
         unoptimized
-        className="w-25"
+        className={` w-25 `}
         ></Image>
+     
+
+
       <h1 className="text-3xl font-bold"> <span className="text-[#0af395]">Devik'</span> <span className="">Apps</span> </h1>
         </span>
       <ul className=" flex gap-5 items-center justify-center ">
-        <li className="text-[#b1b1b1] hover:text-white transition-all">
-            <Link href={""} >
-            <BsTwitter size={25} ></BsTwitter>
-            </Link>
-        </li>
-        <li className="text-[#b1b1b1] hover:text-white transition-all">
+        {/* <li className="text-[#b1b1b1] not-dark:hover:text-black dark:hover:text-white transition-all">
+            <ToggleButton></ToggleButton>
+        </li> */}
+        <li className="text-[#b1b1b1] not-dark:hover:text-black dark:hover:text-white transition-all">
             <Link href={"https://www.facebook.com/profile.php?id=61583449233444&sk=about"} >
             <BsFacebook size={25}></BsFacebook>
             </Link>
         </li>
-        <li className="text-[#b1b1b1] hover:text-white transition-all">
+        <li className="text-[#b1b1b1] not-dark:hover:text-black dark:hover:text-white transition-all">
             <Link href={""} >
             <IoMdMail size={25} ></IoMdMail>
             </Link>
@@ -41,4 +62,44 @@ export default function Navbar() {
         </div>
     </nav>
   );
+  case "light":
+  return (
+    <nav className="flex items-center justify-center fixed top-0 z-2  left-0 p-5 max-md:p-1 w-full backdrop-blur-xl bg-transparent">
+      <div className="flex items-center justify-around m-auto dark:border rounded-2xl md:w-[40vw] px-5 not-dark:shadow-2xl dark:border-[#ffffff2e] backdrop-blur-xl">
+       <span className="flex items-center justify-center  relative gap-5">
+
+      <Image
+        src={`assets/5.png`}
+        alt="Devik'Apps Logo"
+        width={0}
+        height={0}
+        unoptimized
+        className={` w-25 `}
+        ></Image>
+     
+
+
+      <h1 className="text-3xl font-bold"> <span className="text-[#0af395]">Devik'</span> <span className="">Apps</span> </h1>
+        </span>
+      <ul className=" flex gap-5 items-center justify-center ">
+        {/* <li className="text-[#b1b1b1] not-dark:hover:text-black dark:hover:text-white transition-all">
+            <Link href={""} >
+            <BsTwitter size={25} ></BsTwitter>
+            </Link>
+        </li> */}
+        <li className="text-[#b1b1b1] not-dark:hover:text-black dark:hover:text-white transition-all">
+            <Link href={"https://www.facebook.com/profile.php?id=61583449233444&sk=about"} >
+            <BsFacebook size={25}></BsFacebook>
+            </Link>
+        </li>
+        <li className="text-[#b1b1b1] not-dark:hover:text-black dark:hover:text-white transition-all">
+            <Link href={"#contact"} >
+            <IoMdMail size={25} ></IoMdMail>
+            </Link>
+        </li>
+      </ul>
+        </div>
+    </nav>
+  );
+}
 }
