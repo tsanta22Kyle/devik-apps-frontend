@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function HeroSection() {
   return (
     <section className="flex flex-col items-center justify-center text-center py-68 relative bg-background ">

@@ -1,6 +1,8 @@
 import Contact from "./components/Contact";
 import HeroSection from "./components/HeroSection";
 import ServiceCard from "./components/ServiceCard";
+export const dynamic = "force-static";
+export const runtime = "edge";
 
 export default function Home() {
   return (
