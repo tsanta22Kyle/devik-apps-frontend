@@ -10,7 +10,7 @@ export default function Home() {
       <ServicesSection />
       <section id="templates" className="py-20  ">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-4">Choisissez votre style ✨</h2>
+          <h2 className="text-4xl font-bold mb-4">Choisissez votre style</h2>
           <p className="dark:text-gray-400 mb-12">
             Inspirez-vous de modèles gratuits que nous personnalisons selon
             votre identité.

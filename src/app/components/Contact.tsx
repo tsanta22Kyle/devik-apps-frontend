@@ -1,7 +1,7 @@
 export default function Contact(){
     return(
         <section id="contact" className="relative py-20  flex flex-col items-center transition-all">
-  <h2 className="text-4xl font-bold mb-4 text-center">Travaillons ensemble 🤝</h2>
+  <h2 className="text-4xl font-bold mb-4 text-center">Travaillons ensemble</h2>
   <p className="text-gray-400 mb-12 max-w-2xl text-center">
     Vous avez une idée, un projet ou besoin d’un site web sur mesure ?  
     Parlons-en et voyons comment Devik’Apps peut donner vie à votre vision.
