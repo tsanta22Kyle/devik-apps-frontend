@@ -1,42 +1,13 @@
 import Contact from "./components/Contact";
 import HeroSection from "./components/HeroSection";
-import ServiceCard from "./components/ServiceCard";
+import ServicesSection from "./components/ServicesSection";
 export const dynamic = "force-static";
 
 export default function Home() {
   return (
     <main className="  min-h-screen">
       <HeroSection />
-      <section id="services" className="py-16 px-6 md:px-64 relative">
-        <div className="flex flex-col gap-3 ">
-            <h1 className="text-start">Nos services</h1>
-          <div className=" flex gap-25 max-md:flex-col">
-            <h2 className="text-4xl font-semibold text-start mb-10">
-              Les <span className="text-[#0af395]">Services</span> que nous
-              Offrons
-            </h2>
-          <p className="opacity-70">
-            Nous offrons des services permettant aux entreprise d'accroître leur
-            visibilité et de solidifier leur réputation en ligne ainsi que leur
-            productivité .
-          </p>
-          </div>
-        </div>
-        <div  className="flex w-full flex-col gap-3 ">
-           <div className="w-70 h-70 blur-[100px] top-0 left-30 bg-[#00e0ca3a] absolute"></div>
-          <ServiceCard
-            title="Développement Web"
-          />
-          <ServiceCard
-            title="Applications Mobiles"
-            variant="mobile"
-          />
-          <ServiceCard
-            title="Logiciels Sur Mesure"
-            variant="software"
-          />
-        </div>
-      </section>
+      <ServicesSection />
       <section id="templates" className="py-20  ">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-4">Choisissez votre style ✨</h2>

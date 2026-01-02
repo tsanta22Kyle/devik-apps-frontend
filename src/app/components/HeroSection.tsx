@@ -41,15 +41,15 @@ export default function HeroSection() {
       <div className="w-20 h-50 blur-3xl top-[60vh] left-[17vw] bg-[#0025e0] absolute"></div>
       <div className="w-20 h-50 blur-3xl top-[40vh] left-[17vw] bg-[#0025e0b7] absolute"></div>
       <div className="w-5 aspect-square rounded-[7px] blur-[2px] top-[60vh] left-[27vw] bg-[#ffff] absolute"></div>
-      
+
       {/* côté gauche */}
-        <div
+      <div
         className="bg-[url('/assets/portfolio-design.jpg')] bg-center bg-cover bg-white z-1 h-35 w-60 rounded-xl absolute -rotate-12 top-[20vh] right-[10vw] 
                     after:absolute after:bg-black after:-top-5   after:w-[150%] after:h-5 after:left-0  after:blur-[7px]
                     overflow-hidden transition-all duration-500 brightness-105 drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] hover:scale-105
                    "
       ></div>
-        <div
+      <div
         className="bg-[url('/assets/mobile-design-2.jpg')] bg-center bg-cover bg-white z-1 h-30 w-50 rounded-xl absolute rotate-7 top-[45vh] right-[10vw] 
                     after:absolute after:bg-black after:-top-5   after:w-[150%] after:h-5 after:left-0  after:blur-[7px]
                     overflow-hidden transition-all duration-500 brightness-105 drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] hover:scale-105
@@ -78,32 +78,34 @@ export default function HeroSection() {
       <div className="w-20 h-50 blur-3xl top-[60vh] right-[17vw] bg-[#0025e0] absolute"></div>
       <div className="w-20 h-50 blur-3xl top-[40vh] right-[17vw] bg-[#0025e0b7] absolute"></div>
       <div className="w-5 aspect-square rounded-[7px] blur-[2px] top-[60vh] right-[27vw] bg-[#ffff] absolute"></div>
-      
-     {/* ----------------- */}
-      
+
+      {/* ----------------- */}
 
 
 
-      <h1 className="text-5xl text-black dark:text-white font-bold mb-4 z-1 opacity-95">
-        Donnez vie à vos <span className="text-[#0af395]">idées</span> digitales
-      </h1>
-      <p className="text-black dark:text-white max-w-2xl mb-8 z-1 opacity-75">
-        Devik’Apps conçoit des sites web, applications et logiciels sur mesure
-        pour propulser votre entreprise dans le monde numérique.
-      </p>
-      <div className="flex items-center justify-center gap-10 max-md:flex-col">
-        <a
-          href="/"
-          className="bg-[#0af395] z-1 hover:bg-[rgb(62,255,178)] hover:shadow-sm  shadow-[rgb(62,255,178)] duration-200 text-black font-semibold px-6 py-4 rounded-xl transition-all"
-        >
-          Discutons de votre projet
-        </a>
-        <a
-          href="#services"
-          className="dark:bg-[#36363687] border-primary not-dark:text-primary border-2 dark:border-[#ffffff44]  z-1 dark:hover:bg-[rgb(53,53,53)]   duration-200  font-semibold px-6 py-4 rounded-xl transition-all"
-        >
-          Découvrir nos services
-        </a>
+
+      <div className="z-10 flex flex-col items-center max-md:bg-white/70 max-md:dark:bg-black/50 max-md:backdrop-blur-xl max-md:p-8 max-md:rounded-3xl max-md:mx-4 max-md:shadow-2xl max-md:border max-md:border-white/20">
+        <h1 className="text-5xl text-black dark:text-white font-bold mb-4">
+          Donnez vie à vos <span className="text-[#0af395]">idées</span> digitales
+        </h1>
+        <p className="text-black dark:text-white max-w-2xl mb-8 font-medium">
+          Devik’Apps conçoit des sites web, applications et logiciels sur mesure
+          pour propulser votre entreprise dans le monde numérique.
+        </p>
+        <div className="flex items-center justify-center gap-10 max-md:flex-col w-full">
+          <a
+            href="/"
+            className="bg-[#0af395] hover:bg-[rgb(62,255,178)] hover:shadow-lg shadow-sm duration-200 text-black font-semibold px-6 py-4 rounded-xl transition-all w-full md:w-auto"
+          >
+            Discutons de votre projet
+          </a>
+          <a
+            href="#services"
+            className="bg-white/60 dark:bg-[#36363687] backdrop-blur-md border-2 border-[#0af395] dark:border-[#ffffff44] text-black dark:text-white hover:bg-gray-50 dark:hover:bg-[rgb(53,53,53)] duration-200 font-semibold px-6 py-4 rounded-xl transition-all w-full md:w-auto"
+          >
+            Découvrir nos services
+          </a>
+        </div>
       </div>
     </section>
   );
